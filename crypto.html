@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width">
+        <title>Desafio Cryptografia</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-crypto.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+   
+    <body>
+        
+        <header>
+                      
+            <img class="logo" src= "Imagenes/Logo.png"
+
+        </header>
+
+        <main>
+            <section class="fondo-principal">
+                <textarea type="text" id="entrada" cols="30" rows="10" placeholder="Ingrese el texto aqui" required></textarea>
+               
+                
+                <p class="aviso-entrada">Solo letras minúsculas y sin acentos</p>
+            
+                <button class="encryptar" id="boton-encryptar">Encryptar</button>
+            
+                <button class="desencryptar" id="boton-desencryptar">Desencryptar</button>
+
+            
+                <div class="rectangulo-lateral">
+                        <textarea id="salidaHtml"  type="value"></textarea>
+                        <button class="copiar" id="boton-copiar">Copiar</button>
+                </div>
+            
+                <aside>
+                    
+                    <div id="anuncio-lateral" class="rectangulo-lateral">
+                        
+                        <img class="muñeco" src="./Imagenes/muñeco.png" alt="muñeco">
+                        <div class="caja-resultado">
+                            <p class="mensaje-status">Ningún mensaje fue encontrado</p>
+                            <p id="ins-status">Ingrese el texto que deseas encriptar o desencriptar</p>
+                        </div>
+                            
+                    </div>
+                </aside>
+                
+                  
+                <script>
+document.getElementById("anuncio-lateral").style.display = "none"
+
+                     
+                     
+                    var salidaCopiada = " ";
+                   //Inicio de Función para encryptar    
+                    function encriptarInput(){
+
+                        document.getElementById("anuncio-lateral").style.display = "none"
+
+                      let entradajs = document.getElementById("entrada").value;
+                      var entradaCadena = Array.from(entradajs);
+                      var salidaCadena = [];
+                      
+                        for (let i = 0; i <= entradaCadena.length; i++) {
+                            if(entradaCadena[i]=="a"){
+                                salidaCadena.push("ai");
+                            }
+                            else if(entradaCadena[i]=="e"){
+                                salidaCadena.push("enter");
+                            }
+                            else if(entradaCadena[i]=="i"){
+                                salidaCadena.push("imes");
+                            }
+                            else if(entradaCadena[i]=="o"){
+                                salidaCadena.push("ober");
+                            }
+                            else if(entradaCadena[i]=="u"){
+                                salidaCadena.push("ufat"); 
+                            }
+                            
+                            else{
+                                salidaCadena.push(entradaCadena[i]);
+                            }
+                            
+                        }
+                    document.getElementById("salidaHtml").innerHTML = (salidaCadena.join(""));
+                    console.log(salidaCadena.join(""));
+                                     
+                    }
+
+                    //Fin de Función para encryptar
+
+
+                    function copyToClippboard(){
+                        var salidaCopiada= document.querySelector("#salidaHtml");
+                        salidaCopiada.focus();
+                        document.execCommand('selectAll');
+                        document.execCommand('copy');
+                        alert("Copied");
+                    }
+
+
+                    //variables que detectan cuando se activa el boton designado
+                    var botonC = document.getElementById("boton-copiar")
+                    var botonD = document.getElementById("boton-desencryptar");
+                    var botonE = document.getElementById("boton-encryptar");
+                    
+
+                    //eventos que activan las funciones designadas
+                    botonE.onclick = encriptarInput;
+                    botonD.onclick = desencriptarInput;
+                    botonC.onclick = copyToClippboard;
+
+                    //Inicio de Función para desencryptar
+
+                    function desencriptarInput(){
+
+                        document.getElementById("anuncio-lateral").style.display = "none"
+                      
+                        //captura la entrada de un input de html en una variable JS
+                      let entradajs = document.getElementById("entrada").value;
+                      
+                        //convierte una variable de entrada string en una entrada Array
+                      var entradaCadena = Array.from(entradajs);
+                      var salidaCadena = [];
+                      
+                      //Loop para leer cada valor del array evaluando si es unvalor a sustituir, saltando el largo de las sustituciones
+                    for (let i = 0; i <= entradaCadena.length; i++) {
+                        if(entradaCadena[i]=="a"){
+                            salidaCadena.push("a");
+                            i= i+1;
+                        }
+                        
+                        else if(entradaCadena[i]=="e"){
+                            salidaCadena.push("e");
+                            i= i+4;
+                        }
+
+                        else if(entradaCadena[i]=="i"){
+                            salidaCadena.push("i");
+                            i= i+3;
+                        }
+
+                        else if(entradaCadena[i]=="o"){
+                            salidaCadena.push("o");
+                            i= i+3;
+                        }
+                    
+                        else if(entradaCadena[i]=="u"){
+                            salidaCadena.push("u");
+                            i= i+3;
+                        }
+                        
+                        else{
+                            salidaCadena.push(entradaCadena[i]);
+                        }
+                    }
+
+                    //manda la salida desencryptada al HTML y a la consola
+                      document.getElementById("salidaHtml").innerHTML = (salidaCadena.join(""));
+                      return console.log(salidaCadena);              
+                    }
+
+                </script>
+            </section> 
+        </main>
+
+    
+    
+    
+    <footer>
+                <p class="pie-pagina">&copy Copyright Rafael Runard Rueda de León C. 2023</p>
+        
+    </footer>
+    </body>
+
+</html>
+
+

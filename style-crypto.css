@@ -1,0 +1,304 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 1366px;
+    height: 768px;
+    background: #F3F5FC;
+}
+
+header{
+    width:1366px;
+    height: 20%;
+}
+
+.logo{
+/* Vector */
+position: absolute;
+left: 84px;
+top: 40px;
+width: 31.09px;
+height: 48px;
+
+
+/* Dark blue/dark-blue-300 */
+}
+
+p.pie-pagina{
+    text-align: center;
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 40%;
+    top: 95%;  
+}
+
+/* Logo */
+
+
+/* Auto layout */
+
+
+#entrada{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+  
+
+    border: none;
+    background: #F3F5FC;
+    /* identical to box height, or 48px */
+    
+    
+    /* Dark blue/dark-blue-300 */
+    
+    color: #0A3871;
+}
+
+
+
+
+ .resultado-lateral{
+    width: 25%;
+    height: 80%;
+    border: #0A3871;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+
+}
+
+.resultado{
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+
+.aviso-entrada{
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    font-size: 10px;
+}
+
+.encryptar{
+    /* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+
+width: 24%;
+height: 67px;
+
+position: absolute;
+left: 10%;
+top: 80%;
+
+/* Dark blue/dark-blue-300 */
+
+background: #0A3871;
+border-radius: 24px;
+border: none;
+/* Inside auto layout */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+/* White */
+
+color: #FFFFFF;
+position: absolute;
+text-align: center;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.desencryptar{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px;
+gap: 8px;
+
+width: 24%;
+height: 67px;
+
+position: absolute;
+left: 40%;
+top: 80%;
+
+/* Dark blue/dark-blue-300 */
+
+background: #0A3871;
+border-radius: 24px;
+border: none;
+/* Inside auto layout */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+/* White */
+
+color: #FFFFFF;
+position: absolute;
+text-align: center;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+
+
+.rectangulo-lateral {
+    width: 200px;
+    height: 472px;
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.muñeco{
+    position: relative;
+    width: 84%;
+    top: 25.7%;
+    left: 7%;
+}
+
+.caja-resultado{
+    position: relative;
+    width: 84%;
+    height: 13%;
+    top: 30%;
+    left: 7%;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+}
+
+.mensaje-status{
+    position: relative;
+    width: 95%;
+    left: 1%;
+    top: 0%;
+    height:35%;
+   
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+    font-weight: 700;
+    font-size: small;
+    text-align: center;
+}
+
+.resultado{
+    width: 190px;
+    height: 472px;
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    background: #FFFFFF;
+    border-radius: 20px;
+   
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+    font-weight: 700;
+    font-size: small;
+    text-align: center;
+    overflow-wrap: break-word;
+    padding: 2em;
+}
+
+#ins-status {
+    position: relative;
+    width: 95%;
+    left: 1%;
+    top: 7%;
+    height:35%;
+   
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+    font-weight: 700;
+    font-size: 8px;
+    text-align: center;
+}
+
+textarea::placeholder{
+color: #0A3871;
+}
+
+
+
+#salidaHtml{
+    position: relative;
+    width: 84%;
+    height: 70%;
+    top: 10%;
+    left: 7%;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0px;
+}
+.copiar{
+
+    padding: 24px;
+    gap: 8px;
+    
+    width: 84%;
+    height: 2%;
+    
+    position: absolute;
+    top: 85%;
+    left: 7%;
+    
+    /* Dark blue/dark-blue-300 */
+    
+    
+    border-radius: 24px;
+    border: solid;
+    border-color: #0A3871;
+    /* Inside auto layout */
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    
+    /* White */
+    
+    color: #0A3871;
+    position: absolute;
+    text-align: center;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    }
