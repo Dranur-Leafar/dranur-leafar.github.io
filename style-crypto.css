@@ -1,89 +1,35 @@
 body{
     font-family: 'Montserrat', sans-serif;
-    width: 1366px;
-    height: 768px;
+    width: 1366%;
+    height: 768%;
     background: #F3F5FC;
 }
 
 header{
-    width:1366px;
+    width:100%;
     height: 20%;
 }
 
 .logo{
 /* Vector */
 position: absolute;
-left: 84px;
-top: 40px;
-width: 31.09px;
-height: 48px;
-
-
-/* Dark blue/dark-blue-300 */
+left: 7%;
+top: 6%;
 }
-
-p.pie-pagina{
-    text-align: center;
-    padding: 10px;
-    color: #000000;
-    text-align: center;
-    margin: 0 auto;
-    position: absolute;
-    left: 40%;
-    top: 95%;  
-}
-
-/* Logo */
-
-
-/* Auto layout */
-
 
 #entrada{
     position: absolute;
-    width: 577px;
-    height: 48px;
-    left: 240px;
-    top: 168px;
+    width: 35%;
+    height: fit-content;
+    left: 14%;
+    top: 19%;
     
     font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
     font-size: 32px;
-  
-
     border: none;
     background: #F3F5FC;
-    /* identical to box height, or 48px */
-    
-    
-    /* Dark blue/dark-blue-300 */
-    
     color: #0A3871;
 }
-
-
-
-
- .resultado-lateral{
-    width: 25%;
-    height: 80%;
-    border: #0A3871;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 5px;
-    position: absolute;
-    top: 10%;
-    right: 1%;
-
-}
-
-.resultado{
-    position: relative;
-    top: 50%;
-    left: 50%;
-}
-
 
 .aviso-entrada{
     position: absolute;
@@ -93,7 +39,7 @@ p.pie-pagina{
 }
 
 .encryptar{
-    /* Auto layout */
+
 
 display: flex;
 flex-direction: row;
@@ -102,13 +48,11 @@ padding: 24px;
 gap: 8px;
 
 width: 24%;
-height: 67px;
+height: fit-content;
 
 position: absolute;
-left: 10%;
+left:10%;
 top: 80%;
-
-/* Dark blue/dark-blue-300 */
 
 background: #0A3871;
 border-radius: 24px;
@@ -140,7 +84,7 @@ padding: 24px;
 gap: 8px;
 
 width: 24%;
-height: 67px;
+height: fit-content;
 
 position: absolute;
 left: 40%;
@@ -172,16 +116,31 @@ flex-grow: 0;
 
 
 
-
 .rectangulo-lateral {
-    width: 200px;
-    height: 472px;
+    width: 18%;
+    height: 70%;
     position: absolute;
     left: 80%;
     top: 10%;
     background: #FFFFFF;
     border-radius: 20px;
 }
+
+ .resultado-lateral{
+    width: 18%;
+    height: 80%;
+    border: #0A3871;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+
+}
+
+
+
 
 .muñeco{
     position: relative;
@@ -216,30 +175,13 @@ flex-grow: 0;
     text-align: center;
 }
 
-.resultado{
-    width: 190px;
-    height: 472px;
-    position: absolute;
-    left: 80%;
-    top: 10%;
-    background: #FFFFFF;
-    border-radius: 20px;
-   
-    border-style: solid;
-    border-color: #000000;
-    border-width: 0px;
-    font-weight: 700;
-    font-size: small;
-    text-align: center;
-    overflow-wrap: break-word;
-    padding: 2em;
-}
+
 
 #ins-status {
     position: relative;
     width: 95%;
     left: 1%;
-    top: 7%;
+    top: 19%;
     height:35%;
    
     border-style: solid;
@@ -302,3 +244,71 @@ color: #0A3871;
     order: 0;
     flex-grow: 0;
     }
+
+
+    p.pie-pagina{
+        text-align: center;
+        padding: 10px;
+        color: #000000;
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        left: 40%;
+        top: 95%;  
+    }    
+
+    @media screen and (max-width:900px){
+     .rectangulo-lateral  {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        height: 30%;
+        }
+        .muñeco{
+            position: relative;
+            width: 50%;
+            left: 25%;
+
+        }
+     #entrada{
+        width: 70%;
+        top: 22%;
+        font-size: x-large;
+     }
+    
+    #boton-copiar{
+        position: absolute;
+        top: 110%;
+        width: 40%;
+        left: 30%;
+    }
+
+    .encryptar{
+        top: 72%;
+        left: 20%;
+        width: 60%;
+        height: fit-content;
+
+    }
+    
+    .desencryptar{
+        left: 20%;
+        top: 82%;
+        width: 60%;
+        height: fit-content;
+        
+    }
+    .aviso-entrada{
+        top: 61%;
+    }
+
+
+    p.pie-pagina{
+        left: 1%;
+        top: 92%;
+
+    }
+
+    
+    /*, .muñeco, , .mensaje-status, .ins-status, 
